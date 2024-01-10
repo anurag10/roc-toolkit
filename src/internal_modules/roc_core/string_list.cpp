@@ -164,6 +164,12 @@ const char* StringList::find(const char* str_begin, const char* str_end) {
     return NULL;
 }
 
+void StringList::pop_back() {
+    if (size_ == 0) {
+        roc_panic("stringlist: list is empty");
+    }
+}
+
 void StringList::check_member_(const char* str) const {
     if (size_ == 0) {
         roc_panic("stringlist: list is empty");

@@ -97,6 +97,9 @@ public:
     //!  the string in the list or NULL if it is not found.
     ROC_ATTR_NODISCARD const char* find(const char* str_begin, const char* str_end);
 
+    //! Pop the last string in the list. If list is empty, does nothing.
+    void pop_back();
+
 private:
     enum { MinCapacity = 128 };
 
